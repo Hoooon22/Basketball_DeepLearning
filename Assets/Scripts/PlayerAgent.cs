@@ -11,7 +11,7 @@ public class PlayerAgent : Agent
 
     void Update () {
         if (Input.GetMouseButtonDown (0)) {
-            GameObject instance = Instantiate(Ball, ShotPosition.transform.position, ShotPosition.transform.rotation);
+            GameObject instance = Instantiate(Ball, ShotPosition.transform.position, ShotPosition.transform.rotation); 
         }
     }
 }
