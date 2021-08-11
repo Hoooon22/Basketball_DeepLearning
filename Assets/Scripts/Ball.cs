@@ -18,4 +18,17 @@ public class Ball : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer> ();
         Destroy (gameObject, DestroyTime);
     }
+    
+    void OnTriggerEnter (Collider other) {
+        if(other.CompareTag ("Upper")) {
+            isCandidate = true;
+        }
+
+        if(other.CompareTag ("Lower")) {
+            if(isCandidate) {
+                meshRenderer.material.color = Color.green;
+                isGoal = true;
+            }
+        }
+    }
 }
