@@ -11,6 +11,9 @@ public class Ball : MonoBehaviour
     private Rigidbody rigidbody;
     private MeshRenderer meshRenderer;
     private float DestroyTime = 3f;
+    
+    private bool isCandidate = false;
+    private bool isGoal = false;
 
     void Awake () {
         rigidbody = GetComponent<Rigidbody> ();
@@ -18,7 +21,7 @@ public class Ball : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer> ();
         Destroy (gameObject, DestroyTime);
     }
-    
+
     void OnTriggerEnter (Collider other) {
         if(other.CompareTag ("Upper")) {
             isCandidate = true;

@@ -125,6 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f477cb78f7813c46bd3d5edcfecc2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootForceX: 30
-  ShootForceY: 30
-  ShootForceZ: 30
+  ShootForceX: 0
+  ShootForceY: 300
+  ShootForceZ: -220
