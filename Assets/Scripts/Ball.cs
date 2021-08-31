@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.MLAgents;
 
-public class Ball : MonoBehaviour
+public class Ball : Agent
 {
     public float ShootForceX = 30f;
     public float ShootForceY = 30f;
@@ -20,6 +21,14 @@ public class Ball : MonoBehaviour
         rigidbody.AddForce(ShootForceX, ShootForceY, ShootForceZ);
         meshRenderer = GetComponent<MeshRenderer> ();
         Destroy (gameObject, DestroyTime);
+    }
+
+    public override void AgentReset() {
+
+    }
+
+    public override void CollectObservations() {
+        
     }
 
     void OnTriggerEnter (Collider other) {
